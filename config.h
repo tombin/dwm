@@ -13,14 +13,31 @@ static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
 static const char col_black[]       = "#000000";
-static const char col_red[]         = "#ff0000";
 static const char col_yellow[]      = "#ffff00";
 static const char col_white[]       = "#ffffff";
+static const char normfgcolor[]      = "#d8dee9";
+static const char normbgcolor[]      = "#2e3440";
+static const char normbordercolor[]  = "#3b4252";
+static const char selfgcolor[]       = "#81a1c1";
+static const char selbgcolor[]       = "#2e3440";
+static const char selbordercolor[]   = "#81a1c1";
+static const char titlefgcolor[]     = "#a3be8c";
+static const char titlebgcolor[]     = "#2e3440";
+static const char titlebordercolor[] = "#2e3440";
+static const char col_red[]          = "#bf616a";
+
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
+        /* orig
 	[SchemeNorm]   = { col_gray3, col_gray1, col_gray2 },
 	[SchemeSel]    = { col_gray4, col_cyan,  col_cyan  },
         [SchemeWarn]   = { col_black, col_yellow, col_red },
+	[SchemeUrgent] = { col_white, col_red,    col_red },
+        */
+	
+	[SchemeNorm]  = { normfgcolor,  normbgcolor,      normbordercolor },
+	[SchemeSel]   = { selfgcolor,   selbgcolor,       selbordercolor },
+	[SchemeTitle] = { titlefgcolor, titlebordercolor, titlebordercolor },
 	[SchemeUrgent] = { col_white, col_red,    col_red },
 };
 
